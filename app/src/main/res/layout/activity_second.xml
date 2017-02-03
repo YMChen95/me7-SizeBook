@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mengyangchen.assignment1.SecondActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <EditText
+            android:id="@+id/name_in"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:layout_below="@+id/nametxt"
+            android:layout_alignParentStart="true"
+        android:hint="Name(Mandatory)"
+                android:inputType="text" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:ems="10"
+            android:layout_below="@+id/date_edit"
+            android:layout_alignParentStart="true"
+            android:id="@+id/date_in"
+            android:layout_alignParentEnd="true"
+                android:hint="Date(yyyy-mm-dd)"
+                android:inputType="date" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:ems="10"
+            android:id="@+id/neck_in"
+                android:hint="Neck(circumference in inches, numeric)" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:ems="10"
+            android:id="@+id/bust_in"
+                android:hint="Bust(circumference in inches, numeric)" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                android:ems="10"
+                android:id="@+id/chest_in"
+                android:hint="Chest(circumference in inches, numeric)" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:ems="10"
+            android:id="@+id/waist_in"
+                android:hint="Waist(circumference in inches, numeric)" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:ems="10"
+            android:id="@+id/hip_in"
+                android:hint="Hip(circumference in inches, numeric)" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:ems="10"
+            android:id="@+id/inseam_in"
+                android:hint="Inseam(length in inches, numeric)" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/comment_in"
+                android:hint="Comment(textual)" />
+
+    <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+        android:enabled="false" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
