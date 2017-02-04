@@ -9,6 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * This activity is the sub class of the MainActivity.
+ * This Activity basically received the position that passed from context menu
+ * set all the Edittexts to the original name, date, neck etc.
+ * allowed user to change it, and whenever the edit_confirm button is clicked
+ * The new SizeBook will replace the origin one in SizeBookList
+ */
 public class EditActivity extends MainActivity {
     EditText name_edit,date_edit,neck_edit,bust_edit,chest_edit,waist_edit,hip_edit,inseam_edit,comment_edit;
 
@@ -73,6 +80,11 @@ public class EditActivity extends MainActivity {
         });
     }
 
+    /** Called whenever back to the activity
+    * load from file first every time and set the Array adapter
+    * get view from the lisview_sizebook layout
+    * get the position for the count to count how many people in list now
+    */
     @Override
     protected void onStart(){
         super.onStart();

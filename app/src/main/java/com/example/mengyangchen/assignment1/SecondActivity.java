@@ -1,16 +1,18 @@
 package com.example.mengyangchen.assignment1;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Created by me7 on 1/19/17.
+ * This is the subclass for the main activity
+ */
 
 public class SecondActivity extends MainActivity {
 

@@ -1,11 +1,9 @@
 package com.example.mengyangchen.assignment1;
 
-import java.io.Serializable;
-import java.util.Date;
-
 /**
- * Created by mengyangchen on 2017-01-29.
+ * Created by me7 on 1/19/17.
  */
+
 
 public class Sizebook {
 

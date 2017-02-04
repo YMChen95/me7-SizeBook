@@ -32,7 +32,31 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This class is the main view class of the project. <br> In this class,
+ * user interaction and file manipulation is performed.
+ * All files are in the form of "json" files that are stored in Emulator's
+ * accessible from Android Device Monitor:
+ * <pre>
+ *     pre-formatted test:<br>
+ *         File Explorer -> data -> ca.ualberta.cs.lonelytwitter ->
+ * </pre>
+ * <code> begin <br>
+ *     some psedu code here <br>
+ *end. </code>
+ * The file name is indicated in the &nbsp &nbsp FILENAME constant,
+ * <ul>
+ *     <li>item 1</li>
+ *     <li>item 2</li>
+ *     <li>item 3</li>
+ * </ul>
+ * <ol>
+ *     <li>item 1</li>
+ *     <li>item 2</li>
+ *     <li>item 3</li>
+ * </ol>
+ * @author me7 Mengyang Chen
+ * */
 
 public class MainActivity extends Activity {
 
@@ -41,7 +65,10 @@ public class MainActivity extends Activity {
     ListView SizeBookListView;
 
 
-
+    /**
+     * Called when the activity is first created
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +88,12 @@ public class MainActivity extends Activity {
         registerForContextMenu(SizeBookListView);
         //SizeBookListView.setOnItemLongClickListener(new AdapterView.());
     }
+
+    /**
+     * Create the context menu here
+     * Long clicked the specific item of Listview
+     * set "Edit" and "Delete" as two options
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                       ContextMenu.ContextMenuInfo menuInfo) {
@@ -71,6 +104,12 @@ public class MainActivity extends Activity {
 
     }
 
+    /**
+     * get the position of that item on SizeBookList
+     * and passed it to EditActivity if user clicked the Edit button
+     * if user clicked Delete button
+     * remove the SizeBookList(position) from the list
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         //taken from http://stackoverflow.com/questions/2453620/android-how-to-find-the-position-clicked-from-the-context-menu
@@ -83,7 +122,6 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "Editing "+ name, Toast.LENGTH_SHORT).show();
             Intent i = new Intent(MainActivity.this, EditActivity.class);
 
-            //TO DO
             i.putExtra("position",position);
 
             startActivity(i);
@@ -101,6 +139,12 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    /**
+     * Called whenever back to the activity
+     * load from file first every time and set the Array adapter
+     * get view from the lisview_sizebook layout
+     * get the position for the count to count how many people in list now
+     */
     @Override
     protected void onStart(){
         super.onStart();
@@ -143,6 +187,12 @@ public class MainActivity extends Activity {
         }
     }
 
+
+
+    /** Loads tweets from file
+     * @throws FileNotFoundException if folder not exists
+     * @exception FileNotFoundException if the file is not created
+     */
     public void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -159,6 +209,11 @@ public class MainActivity extends Activity {
         }
 
     }
+    /**
+     * Saves the Sizes in file in JSON format.
+     * @throws FileNotFoundException if folder not exists
+     * @exception IOException if file can't open
+     */
 
     public void saveInFile() {
         try {
