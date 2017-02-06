@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 /**
  * Created by me7 on 1/19/17.
- * This is the subclass for the main activity
+ * This is the subclass(AddActivity) for the main activity
+ * When user clicked add, it goes to this activity
  */
 
 public class SecondActivity extends MainActivity {
@@ -20,6 +21,12 @@ public class SecondActivity extends MainActivity {
 
 
 
+    /**
+     * Called when the activity is first created
+     * Get the information from all the EditText
+     * Store them into String and add to the SizeBookList by using SizeBook
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +42,7 @@ public class SecondActivity extends MainActivity {
         inseam_in =(EditText) findViewById(R.id.inseam_in);
         comment_in = (EditText) findViewById(R.id.comment_in);
 
-
-
         final Button SaveButton=(Button) findViewById(R.id.save);
-
 
         SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +67,9 @@ public class SecondActivity extends MainActivity {
                 finish();
             }
         });
-
+            /**
+             *Only when the EditText Name_in is not empty the button "Save" is enable
+             */
         name_in.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -80,7 +86,9 @@ public class SecondActivity extends MainActivity {
         });
 
     }
-
+    /** Called whenever back to the activity
+     * super.onStart()its for the SizeBookList
+     */
     @Override
     protected void onStart(){
         super.onStart();

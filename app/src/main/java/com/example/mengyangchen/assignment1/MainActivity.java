@@ -152,6 +152,13 @@ public class MainActivity extends Activity {
         ArrayAdapter<Sizebook>adapter = new SizeBookListAdapter();
         SizeBookListView.setAdapter(adapter);
     }
+
+
+    /**
+     * Private class SizeBookListAdapter extends from Sizebook
+     * get the information from lisview_sizebook lay_out
+     * and store in the currentSizebook(extends from Sizebook class), set Text for the activity_main
+     */
     private class SizeBookListAdapter extends ArrayAdapter<Sizebook>{
         public SizeBookListAdapter(){
             super(MainActivity.this,R.layout.listview_sizebook,SizeBookList);

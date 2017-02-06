@@ -3,7 +3,12 @@ package com.example.mengyangchen.assignment1;
 /**
  * Created by me7 on 1/19/17.
  */
-
+/**
+ * This class is one of the most important class that is used to store the added information
+ * There are nine attributes here also nine operations
+ * each one of them correspond to the real SizeBook's data
+ * use get_... to use this class
+*/
 
 public class Sizebook {
 
